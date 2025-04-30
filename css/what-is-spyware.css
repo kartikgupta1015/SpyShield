@@ -1,0 +1,483 @@
+/* What is Spyware Page Specific Styles */
+
+/* Definition Section */
+.definition-section {
+  padding: var(--space-8) 0;
+  background-color: var(--white);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.text-content {
+  max-width: 540px;
+}
+
+.text-content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.text-content p {
+  margin-bottom: var(--space-4);
+}
+
+.text-content ul {
+  list-style-type: disc;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.text-content ul li {
+  margin-bottom: var(--space-2);
+}
+
+.spyware-illustration {
+  width: 100%;
+  height: 400px;
+  background-image: url('https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: var(--space-8) 0;
+  background-color: var(--gray-100);
+}
+
+.timeline-section h2, 
+.timeline-section > p {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeline-section > p {
+  margin-bottom: var(--space-6);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-6) 0;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: var(--primary);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-7);
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: attr(data-year);
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 35px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  line-height: 35px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -70px;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -70px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -10px;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -10px;
+}
+
+.timeline-content {
+  position: relative;
+  padding: var(--space-4);
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-content h3 {
+  margin-bottom: var(--space-2);
+  color: var(--primary-dark);
+}
+
+.timeline-content p {
+  margin-bottom: 0;
+  color: var(--gray-700);
+}
+
+/* Types Section */
+.types-section {
+  padding: var(--space-8) 0;
+  background-color: var(--white);
+}
+
+.types-section h2,
+.types-section > p {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.types-section > p {
+  margin-bottom: var(--space-6);
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.type-card {
+  background-color: var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.type-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.type-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-3);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.keylogger-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233E92CC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'%3E%3C/rect%3E%3Cpath d='M6 8h.001'%3E%3C/path%3E%3Cpath d='M10 8h.001'%3E%3C/path%3E%3Cpath d='M14 8h.001'%3E%3C/path%3E%3Cpath d='M18 8h.001'%3E%3C/path%3E%3Cpath d='M8 12h.001'%3E%3C/path%3E%3Cpath d='M12 12h.001'%3E%3C/path%3E%3Cpath d='M16 12h.001'%3E%3C/path%3E%3Cpath d='M7 16h10'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.adware-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FB8500' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M15 10 8 14'%3E%3C/path%3E%3Cpath d='m7.5 9.5.5-1 1 .5'%3E%3C/path%3E%3Cpath d='m16.5 15.5-.5 1-1-.5'%3E%3C/path%3E%3Cpath d='M15 16.5H9'%3E%3C/path%3E%3Cpath d='M9 7.5h6'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.trojan-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E63946' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 9V6a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v3'%3E%3C/path%3E%3Cpath d='M10 16c-5.7 0-6-4-6-9H3a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4h-1c0 5-.3 9-6 9Z'%3E%3C/path%3E%3Cpath d='M10 9v7'%3E%3C/path%3E%3Cpath d='M14 16v-3.5a.5.5 0 0 1 1 0V16'%3E%3C/path%3E%3Cpath d='M18 9v7'%3E%3C/path%3E%3Cpath d='M6 9v7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.stalkerware-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232C3E50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpath d='M8 15V9l11 6-11 6Z'%3E%3C/path%3E%3Cpath d='m8 9 11 6'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.type-card h3 {
+  margin-bottom: var(--space-2);
+}
+
+.type-card p {
+  color: var(--gray-700);
+  margin-bottom: var(--space-3);
+}
+
+.learn-more-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.learn-more-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.type-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  padding: var(--space-4);
+  text-align: left;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all var(--transition-normal);
+  pointer-events: none;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.type-card.active .type-detail {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.type-detail h4 {
+  color: var(--primary-dark);
+  margin-bottom: var(--space-3);
+}
+
+.type-detail ul {
+  list-style-type: disc;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.type-detail ul li {
+  margin-bottom: var(--space-2);
+}
+
+.close-detail {
+  background-color: var(--gray-200);
+  color: var(--gray-800);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.close-detail:hover {
+  background-color: var(--gray-300);
+}
+
+/* Case Studies Section */
+.case-studies-section {
+  padding: var(--space-8) 0;
+  background-color: var(--gray-100);
+}
+
+.case-studies-section h2,
+.case-studies-section > p {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-studies-section > p {
+  margin-bottom: var(--space-6);
+}
+
+.case-studies {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.case-study {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.case-study:last-child {
+  margin-bottom: 0;
+}
+
+.case-study h3 {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: var(--space-3) var(--space-5);
+  margin-bottom: 0;
+}
+
+.case-content {
+  padding: var(--space-5);
+}
+
+.case-details {
+  margin-bottom: var(--space-4);
+}
+
+.case-impact h4 {
+  color: var(--primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.case-impact ul {
+  list-style-type: disc;
+  padding-left: var(--space-5);
+  margin-bottom: 0;
+}
+
+.case-impact ul li {
+  margin-bottom: var(--space-2);
+}
+
+.case-impact ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Next Steps Section */
+.next-steps-section {
+  padding: var(--space-8) 0;
+  background-color: var(--secondary);
+  color: var(--white);
+  text-align: center;
+}
+
+.next-steps-section h2 {
+  color: var(--white);
+}
+
+.next-steps-section p {
+  max-width: 700px;
+  margin: 0 auto var(--space-5);
+  font-size: var(--font-size-lg);
+}
+
+.next-steps-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.next-steps-section .btn-primary {
+  background-color: var(--white);
+  color: var(--secondary);
+  border-color: var(--white);
+}
+
+.next-steps-section .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.next-steps-section .btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.next-steps-section .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .text-content {
+    max-width: none;
+  }
+  
+  .spyware-illustration {
+    height: 300px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 70px;
+  }
+  
+  .timeline-track {
+    left: 40px;
+  }
+  
+  .timeline-item::after {
+    left: 0 !important;
+    right: auto !important;
+  }
+  
+  .timeline-item::before {
+    left: 30px !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-content {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 576px) {
+  .spyware-illustration {
+    height: 200px;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline-track {
+    left: 30px;
+  }
+  
+  .timeline-item::after {
+    width: 60px;
+    font-size: 14px;
+  }
+  
+  .timeline-item::before {
+    left: 20px !important;
+  }
+  
+  .next-steps-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .next-steps-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: var(--space-2);
+  }
+}
