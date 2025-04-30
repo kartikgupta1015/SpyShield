@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spyware Detection | Spyshield</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/detection.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/detection-tools.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Spy<span>Shield</span></a>
+        </div>
+        <nav>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="what-is-spyware.html">What is Spyware?</a></li>
+            <li><a href="detection.html" class="active">Detection</a></li>
+            <li><a href="prevention.html">Prevention</a></li>
+            <li><a href="news.html">News</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="language-selector">
+          <button id="language-toggle">
+            <span class="current-language">EN</span>
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <ul class="language-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="hi">हिन्दी</li>
+           
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Detecting Spyware on Your Devices</h1>
+          <p>
+            Learn how to identify signs of spyware infection and use our
+            interactive tools to check your device's security.
+          </p>
+        </div>
+      </section>
+
+      <section class="warning-signs-section">
+        <div class="container">
+          <h2>Common Warning Signs of Spyware</h2>
+          <p>
+            Spyware often reveals itself through unusual device behavior. Be
+            alert to these warning signs:
+          </p>
+
+          <div class="signs-grid">
+            <div class="sign-card">
+              <div class="sign-icon battery-icon"></div>
+              <h3>Battery Drain</h3>
+              <p>
+                Unusual or rapid battery depletion, even when the device is not
+                being actively used.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon performance-icon"></div>
+              <h3>Poor Performance</h3>
+              <p>
+                Unexplained slowdowns, crashes, or freezing of applications and
+                systems.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon heat-icon"></div>
+              <h3>Overheating</h3>
+              <p>
+                Device becomes unusually warm even when not performing intensive
+                tasks.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon data-icon"></div>
+              <h3>Excessive Data Usage</h3>
+              <p>
+                Unexplained increase in data consumption when your usage habits
+                haven't changed.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon strange-activity-icon"></div>
+              <h3>Strange Activity</h3>
+              <p>
+                Unusual texts, emails, or social media posts that you didn't
+                create.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon popup-icon"></div>
+              <h3>Pop-ups & Redirects</h3>
+              <p>
+                Frequent pop-up advertisements or browser redirects to
+                unfamiliar websites.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon settings-icon"></div>
+              <h3>Changed Settings</h3>
+              <p>
+                Browser homepage, search engine, or system settings that change
+                without your permission.
+              </p>
+            </div>
+
+            <div class="sign-card">
+              <div class="sign-icon unknown-apps-icon"></div>
+              <h3>Unknown Applications</h3>
+              <p>
+                Unfamiliar apps or processes running in the background of your
+                device.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="diagnosis-quiz-section">
+        <div class="container">
+          <h2>Self-Diagnosis Quiz: Is Your Device Infected?</h2>
+          <p>
+            Answer the following questions to evaluate your device's security
+            status.
+          </p>
+
+          <div class="quiz-container">
+            <div class="quiz-progress">
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+              <div class="progress-text">
+                Question <span id="current-question">1</span> of
+                <span id="total-questions">10</span>
+              </div>
+            </div>
+
+            <div class="quiz-content">
+              <div class="quiz-question active" data-question="1">
+                <h3>
+                  Has your device's battery life significantly decreased
+                  recently?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q1" value="yes" />
+                    <span class="option-text"
+                      >Yes, it drains much faster than before</span
+                    >
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q1" value="somewhat" />
+                    <span class="option-text"
+                      >Somewhat, I've noticed some difference</span
+                    >
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q1" value="no" />
+                    <span class="option-text">No, battery life is normal</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q1" value="unsure" />
+                    <span class="option-text">I'm not sure</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="2">
+                <h3>
+                  Have you noticed your device running unusually hot, even when
+                  not in heavy use?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q2" value="yes" />
+                    <span class="option-text">Yes, it gets very hot</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q2" value="somewhat" />
+                    <span class="option-text"
+                      >Sometimes it seems warmer than usual</span
+                    >
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q2" value="no" />
+                    <span class="option-text"
+                      >No, temperature seems normal</span
+                    >
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q2" value="unsure" />
+                    <span class="option-text">I haven't paid attention</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="3">
+                <h3>
+                  Does your device's battery percentage drop significantly
+                  without heavy use?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q3" value="yes" />
+                    <span class="option-text">Yes, very quickly</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q3" value="somewhat" />
+                    <span class="option-text">Somewhat, but manageable</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q3" value="no" />
+                    <span class="option-text">No, battery drain is normal</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q3" value="unsure" />
+                    <span class="option-text">I haven't noticed</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="4">
+                <h3>
+                  Has your device ever shut down unexpectedly even with enough
+                  battery left?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q4" value="yes" />
+                    <span class="option-text">Yes, it happens often</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q4" value="sometimes" />
+                    <span class="option-text">Rarely happens</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q4" value="no" />
+                    <span class="option-text">No, never happened</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q4" value="unsure" />
+                    <span class="option-text">Not sure</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="5">
+                <h3>How old is your device?</h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q5" value="less_than_1" />
+                    <span class="option-text">Less than 1 year</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q5" value="1_to_2" />
+                    <span class="option-text">1–2 years</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q5" value="2_to_3" />
+                    <span class="option-text">2–3 years</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q5" value="more_than_3" />
+                    <span class="option-text">More than 3 years</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="6">
+                <h3>Do you leave your phone charging overnight regularly?</h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q6" value="always" />
+                    <span class="option-text">Yes, every night</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q6" value="sometimes" />
+                    <span class="option-text">Sometimes</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q6" value="rarely" />
+                    <span class="option-text">Rarely</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q6" value="never" />
+                    <span class="option-text">Never</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="7">
+                <h3>
+                  Do you use a fast charger (higher wattage than the original
+                  charger)?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q7" value="yes" />
+                    <span class="option-text">Yes, often</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q7" value="sometimes" />
+                    <span class="option-text">Occasionally</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q7" value="no" />
+                    <span class="option-text">No, only original charger</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q7" value="unsure" />
+                    <span class="option-text">I'm not sure</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="8">
+                <h3>
+                  Have you noticed apps crashing or the phone becoming slow
+                  during regular use?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q8" value="yes" />
+                    <span class="option-text">Yes, frequently</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q8" value="sometimes" />
+                    <span class="option-text">Sometimes</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q8" value="no" />
+                    <span class="option-text">No, works smoothly</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q8" value="unsure" />
+                    <span class="option-text">Haven't noticed</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="9">
+                <h3>
+                  Do you see swelling on the back of your phone or screen
+                  lifting slightly?
+                </h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q9" value="yes" />
+                    <span class="option-text">Yes, visible swelling</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q9" value="maybe" />
+                    <span class="option-text">Maybe, not sure</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q9" value="no" />
+                    <span class="option-text">No, looks fine</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-question" data-question="10">
+                <h3>How often do you fully charge your battery to 100%?</h3>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q10" value="daily" />
+                    <span class="option-text">Daily</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q10" value="few_times_week" />
+                    <span class="option-text">Few times a week</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q10" value="rarely" />
+                    <span class="option-text">Rarely</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q10" value="unsure" />
+                    <span class="option-text">Not sure</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- More questions would be added here, omitted for brevity -->
+
+              <div class="quiz-results">
+                <h3>Your Device Security Assessment</h3>
+                <div class="risk-meter">
+                  <div class="risk-level" id="risk-level"></div>
+                  <div class="risk-labels">
+                    <span>Low Risk</span>
+                    <span>Medium Risk</span>
+                    <span>High Risk</span>
+                  </div>
+                </div>
+                <div class="results-content" id="results-content"></div>
+                <div class="results-actions">
+                  <a href="prevention.html" class="btn btn-primary"
+                    >View Protection Steps</a
+                  >
+                  <button class="btn btn-secondary" id="retake-quiz">
+                    Retake Quiz
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-navigation">
+              <button id="prev-question" class="btn btn-outline" disabled>
+                Previous
+              </button>
+              <button id="next-question" class="btn btn-primary">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="simulator-section">
+        <div class="container">
+          <h2>Spyware Simulator: Understanding the Risks</h2>
+          <p>
+            This interactive demonstration shows how spyware can infiltrate your
+            device and what information it can access. Don't worry - this is
+            just a simulation and completely safe.
+          </p>
+
+          <div class="simulator-container">
+            <div class="simulator-device">
+              <div class="device-screen">
+                <div class="device-content">
+                  <div class="sim-app-grid">
+                    <div class="sim-app" data-app="messages">Messages</div>
+                    <div class="sim-app" data-app="photos">Photos</div>
+                    <div class="sim-app" data-app="banking">Banking</div>
+                    <div class="sim-app" data-app="email">Email</div>
+                    <div class="sim-app" data-app="social">Social</div>
+                    <div class="sim-app" data-app="browser">Browser</div>
+                    <div class="sim-app" data-app="contacts">Contacts</div>
+                    <div class="sim-app" data-app="calendar">Calendar</div>
+                  </div>
+                  <div class="sim-app-view"></div>
+                </div>
+                <div class="spyware-overlay">
+                  <div class="data-stream"></div>
+                  <div class="infiltration-points"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="simulator-controls">
+              <div class="control-panel">
+                <h3>Simulation Controls</h3>
+                <div class="control-buttons">
+                  <button id="start-simulation" class="btn btn-primary">
+                    Start Simulation
+                  </button>
+                  <button
+                    id="pause-simulation"
+                    class="btn btn-outline"
+                    disabled
+                  >
+                    Pause
+                  </button>
+                  <button
+                    id="reset-simulation"
+                    class="btn btn-secondary"
+                    disabled
+                  >
+                    Reset
+                  </button>
+                </div>
+                <div class="simulation-info">
+                  <h4>Simulation Status: <span id="sim-status">Ready</span></h4>
+                  <div class="info-detail">
+                    <p>
+                      Click on apps in the device to interact with them and see
+                      how spyware can access their data.
+                    </p>
+                    <p>The simulation will show:</p>
+                    <ul>
+                      <li>How spyware enters your device</li>
+                      <li>What information it can access</li>
+                      <li>How data is transmitted to attackers</li>
+                      <li>Indicators that could alert you to its presence</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="data-panel">
+                <h3>Data Being Accessed</h3>
+                <div class="accessed-data" id="accessed-data">
+                  <p class="data-placeholder">
+                    Start the simulation to see what data spyware can access.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="checklist-section">
+        <div class="container">
+          <h2>Spyware Detection Checklist</h2>
+          <p>Follow these steps to check your device for potential spyware.</p>
+
+          <div class="checklist-container">
+            <div class="checklist-item">
+              <div class="check-number">1</div>
+              <div class="check-content">
+                <h3>Check Running Processes</h3>
+                <p>
+                  Review your device's task manager or process list for
+                  unfamiliar applications consuming resources.
+                </p>
+                <div class="check-instructions">
+                  <h4>How to Check:</h4>
+                  <div class="tab-container">
+                    <div class="tab-buttons">
+                      <button class="tab-btn active" data-tab="windows">
+                        Windows
+                      </button>
+                      <button class="tab-btn" data-tab="mac">Mac</button>
+                      <button class="tab-btn" data-tab="android">
+                        Android
+                      </button>
+                      <button class="tab-btn" data-tab="ios">iOS</button>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="windows">
+                        <ol>
+                          <li>
+                            Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
+                            <kbd>Esc</kbd> to open Task Manager
+                          </li>
+                          <li>Click on the "Processes" tab</li>
+                          <li>
+                            Look for unfamiliar programs, especially those using
+                            high CPU, memory, or network resources
+                          </li>
+                          <li>Research any suspicious process names online</li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="mac">
+                        <ol>
+                          <li>
+                            Press <kbd>Command</kbd> + <kbd>Space</kbd> to open
+                            Spotlight Search
+                          </li>
+                          <li>
+                            Type "Activity Monitor" and press <kbd>Enter</kbd>
+                          </li>
+                          <li>
+                            Review the processes, focusing on CPU and Network
+                            tabs
+                          </li>
+                          <li>
+                            Look for unfamiliar processes and research them if
+                            necessary
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="android">
+                        <ol>
+                          <li>Go to Settings > Apps > Running or All apps</li>
+                          <li>Check for unfamiliar applications</li>
+                          <li>
+                            Review permissions granted to each app (especially
+                            Camera, Microphone, Location, and Storage access)
+                          </li>
+                          <li>
+                            Look for battery usage statistics for unusual
+                            activity
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="ios">
+                        <ol>
+                          <li>Go to Settings > Battery</li>
+                          <li>
+                            Check which apps are using battery in the background
+                          </li>
+                          <li>
+                            Review Settings > Privacy to check which apps have
+                            access to your camera, microphone, location, etc.
+                          </li>
+                          <li>
+                            Check Settings > General > iPhone Storage for
+                            unfamiliar apps
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="check-number">2</div>
+              <div class="check-content">
+                <h3>Monitor Network Activity</h3>
+                <p>
+                  Check for unusual network connections or data transfers from
+                  your device.
+                </p>
+                <div class="check-instructions">
+                  <h4>How to Check:</h4>
+                  <div class="tab-container">
+                    <div class="tab-buttons">
+                      <button class="tab-btn active" data-tab="windows2">
+                        Windows
+                      </button>
+                      <button class="tab-btn" data-tab="mac2">Mac</button>
+                      <button class="tab-btn" data-tab="android2">
+                        Android
+                      </button>
+                      <button class="tab-btn" data-tab="ios2">iOS</button>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="windows2">
+                        <ol>
+                          <li>
+                            Open Task Manager > Performance tab > Open Resource
+                            Monitor
+                          </li>
+                          <li>Click on the "Network" tab</li>
+                          <li>
+                            Observe active connections and processes with
+                            network activity
+                          </li>
+                          <li>
+                            Look for programs sending data when you're not
+                            actively using them
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="mac2">
+                        <ol>
+                          <li>Open Activity Monitor > Network tab</li>
+                          <li>
+                            Observe which processes are sending/receiving data
+                          </li>
+                          <li>
+                            Pay attention to processes with high data transfer
+                            rates
+                          </li>
+                          <li>
+                            Research any unfamiliar processes with network
+                            activity
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="android2">
+                        <ol>
+                          <li>
+                            Go to Settings > Network & Internet > Data Usage
+                          </li>
+                          <li>
+                            Review which apps are using data in the background
+                          </li>
+                          <li>
+                            Look for unfamiliar apps or excessive usage from
+                            known apps
+                          </li>
+                          <li>
+                            Consider installing a network monitor app for more
+                            detailed information
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="tab-pane" id="ios2">
+                        <ol>
+                          <li>
+                            Go to Settings > Cellular or Settings > Mobile Data
+                          </li>
+                          <li>Review which apps are using cellular data</li>
+                          <li>Look for unknown apps or excessive usage</li>
+                          <li>
+                            Check if apps are using data even when you're not
+                            actively using them
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="checklist-item">
+              <div class="check-number">3</div>
+              <div class="check-content">
+                <h3>Scan for Malware</h3>
+                <p>
+                  Use reputable security software to scan your device for
+                  spyware and other malicious software.
+                </p>
+                <div class="check-instructions">
+                  <h4>Recommended Security Tools:</h4>
+                  <div class="security-tools">
+                    <div class="tool-card">
+                      <div class="tool-logo"></div>
+                      <h5>Malwarebytes</h5>
+                      <p>
+                        Effective at detecting and removing various types of
+                        malware, including spyware.
+                      </p>
+                      <a href="#" class="tool-link">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                      <div class="tool-logo"></div>
+                      <h5>Bitdefender</h5>
+                      <p>
+                        Comprehensive security suite with advanced threat
+                        detection.
+                      </p>
+                      <a href="#" class="tool-link">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                      <div class="tool-logo"></div>
+                      <h5>Kaspersky</h5>
+                      <p>
+                        Strong at identifying sophisticated spyware and
+                        monitoring tools.
+                      </p>
+                      <a href="#" class="tool-link">Learn More</a>
+                    </div>
+                  </div>
+                  <div class="scan-tips">
+                    <h5>Scanning Tips:</h5>
+                    <ul>
+                      <li>Run scans regularly (at least once a week)</li>
+                      <li>Perform full system scans, not just quick scans</li>
+                      <li>Keep your security software updated</li>
+                      <li>
+                        Consider using multiple tools for thorough detection
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-steps-section">
+        <div class="container">
+          <h2>What to Do If You Find Spyware</h2>
+          <p>
+            If you've detected spyware on your device, it's important to take
+            immediate action.
+          </p>
+          <div class="next-steps-grid">
+            <div class="step-card">
+              <div class="step-icon disconnect-icon"></div>
+              <h3>Disconnect from the Internet</h3>
+              <p>
+                Prevent the spyware from sending your data by disconnecting from
+                all networks.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon backup-icon"></div>
+              <h3>Backup Important Data</h3>
+              <p>
+                Save your essential files to an external device or secure cloud
+                storage.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-icon password-icon"></div>
+              <h3>Change Passwords</h3>
+              <p>
+                Update passwords for all important accounts, especially
+                financial ones.
+              </p>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="prevention.html" class="btn btn-primary"
+              >Learn How to Prevent Spyware</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">Spy<span>Shield</span></div>
+            <p>
+              Protecting your digital life from spyware and other cyber threats.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><span class="social-icon facebook-icon"></span
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><span class="social-icon twitter-icon"></span
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><span class="social-icon linkedin-icon"></span
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><span class="social-icon instagram-icon"></span
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="what-is-spyware.html">What is Spyware?</a></li>
+              <li><a href="detection.html">Detection</a></li>
+              <li><a href="prevention.html">Prevention</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="contact-info">
+              <li>
+                <span class="contact-icon email-icon"></span>
+                usersecurity@Spyshield.com
+              </li>
+              <li>
+                <span class="contact-icon phone-icon"></span> +91 9256555888
+              </li>
+              <li>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Spyshield. All rights reserved.</p>
+          <ul class="footer-policies">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
