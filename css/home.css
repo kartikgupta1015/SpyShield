@@ -680,3 +680,8 @@
   overflow: hidden;
   z-index: 99999; /* HUGE z-index to be on top of everything */
 }
+
+.disable-click {
+  pointer-events: none;
+  cursor: default;
+}
